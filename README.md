@@ -1,104 +1,144 @@
-# E-commerce_website-in-java
+# E-Commerce Web Application – Spring Boot
 
+## 📌 Project Overview
+This project is a complete **E-commerce web application** developed using **Spring Boot**.  
+The objective of this project is to understand how a real e-commerce system works, from backend services to frontend interaction, while respecting clean architecture and separation of concerns.
 
-## E - COMMERCE WEB PROJECT IN SPRING BOOT
+The application allows managing **users, products, and orders** with full CRUD operations and a clear workflow between frontend and backend.
 
+---
 
+## 🏗️ Architecture
+The project follows a **backend + frontend architecture**.
 
-<!-- [![Contributors][contributors-shield]][contributors-url]
-[![MIT License][license-shield]][license-url]
-[![Isses][issues-shield]][issues-url]
+### Backend
+The backend is built with **Spring Boot** and organized into independent services:
+- **User Service**: manages users and profiles
+- **Product Service**: manages product catalog and inventory
+- **Order Service**: manages orders and order history
+- **API Gateway**: acts as a single entry point for all requests
 
--->
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
-<br>
-<h3>currently working on  New Branch(https://github.com/jaygajera17/E-commerce-project-springBoot/tree/master2) for Integrated Hibernate, services, based well structured code.</h3>
+Each service has its **own PostgreSQL database**, ensuring data isolation and better maintainability.  
+All requests pass through the **API Gateway**.
 
+### Frontend
+The frontend is a **simple React (Vite) application** that communicates with the backend using REST APIs.  
+It provides basic interfaces for managing users, products, and orders.
 
+---
 
+## 🛠️ Technologies Used
+### Backend
+- Java
+- Spring Boot
+- Spring MVC
+- Spring Cloud
+- Spring Data JPA / Hibernate
+- REST APIs
+- PostgreSQL
 
-## Features
-- ⚙️Spring Mvc, JDBC , Jsp Servlet
-- 📝ADMIN MODULE + USER MODULE
-- ➕CRUD OPERATION
-- 🌱Easy to understand beginner friendly.
-- 🥳Pull Request Welcome (Open Source).
+### Frontend
+- React 18
+- Vite
+- Axios
 
+### DevOps & Tools
+- Docker
+- Docker Compose
+- Bash Scripts
+- Git & GitHub
 
+---
 
+## ✨ Features
+- CRUD operations for users, products, and orders
+- API Gateway routing
+- Independent databases per service
+- Frontend visualization of data
+- Containerized backend using Docker
+- Simple and clean user interface
+- Modular and scalable architecture
 
-## How To Run ?
+---
 
-- Pre requirement:- Spring boot Installed in Eclipse IDE ,  mysql Database , xampp 
+## 🧑‍💻 Application Modules
 
-- please make sure you have eclipse ide enterprise for web development if not then re install set up & choose web option.
-<img width="169" alt="image" src="https://user-images.githubusercontent.com/81226571/178137583-578558de-ff7e-498b-bb00-927dd46b4fb0.png">
+### 👤 User Management
+- View all users
+- Add new users
+- Display user information in real time
 
+### 📦 Product Management
+- View all products
+- Add new products
+- Manage inventory and pricing
 
- (1)
-```sh
-Download and import project in Eclipse Ide
-```
- (2)
-```sh
- Make database name :- springproject 
- ```
-  (3)
-```sh
- import springproject.sql file in database to Create all table 
- ```
+### 🛒 Order Management
+- View orders
+- Create new orders by selecting users and products
+- Display order details
 
-(4)
-```sh
-Right click project and run as spring boot & open:- http://localhost:8080/
-```
+---
 
-## project directory 
-<img width="302" alt="image" src="https://user-images.githubusercontent.com/81226571/178137751-c02d40b5-e718-4aad-816a-f45807612e5c.png">
-<h4> MVC WorkFlow: </h4>
-    → in the Admincontroller.java & userController.java files having a mapping based function which returns file name.<br>
-    → in Src->main->webapp->views  following Jsp file will be executing.
+## 🐳 Containerization
+The entire backend is **fully containerized** using Docker.  
+To simplify development, automated scripts are provided:
 
-## log in 
-ADMIN Module (http://localhost:8080/admin) 
--  user name:- admin
--  password :- 123
--  Note(above default username and password , it can be change in the database)
+- **Build Script**: builds Docker images
+- **Start Script**: runs all services
+- **Stop Script**: stops containers
+- **Clean Script**: removes containers and images
 
-  User module
--  user name:- jay 
--  password:- 123
+The project can be launched with a **single command**.
 
-## Important link
-- 𝗬𝗼𝘂𝘁𝘂𝗯𝗲 𝗽𝗿𝗼𝗷𝗲𝗰𝘁 𝘃𝗶𝗱𝗲𝗼 𝗪𝗼𝗿𝗸𝗶𝗻𝗴 𝗗𝗲𝗺𝗼 + 𝘀𝘁𝗲𝗽 𝗯𝘆 𝘀𝘁𝗲𝗽 𝗲𝘅𝗲𝗰𝘂𝘁𝗶𝗼𝗻 𝗹𝗶𝗻𝗸 ::---  [  click here  ](https://youtu.be/c6WWdINWSlI) [![youtube][youtube-shield]][youtube-url]
+---
 
+## ▶️ How to Run the Project
 
-## preview
-![img](https://github.com/jaygajera17/E-commerce_website-in-java/blob/main/JtProject/src/main/resources/Product%20Images/Screenshot%202022-04-11%20111601.jpg)
-![img](https://github.com/jaygajera17/E-commerce_website-in-java/blob/main/JtProject/src/main/resources/Product%20Images/Screenshot%202022-04-11%20111538.jpg)
-<img width="938" alt="image" src="https://user-images.githubusercontent.com/81226571/178270030-c4e9f485-fe0b-4bbb-804a-a28d2c182c7c.png">
+### Prerequisites
+- Java JDK
+- Docker & Docker Compose
+- Node.js
+- PostgreSQL
 
+### Steps
+1. Clone the repository
+2. Run the build script
+3. Start all services
+4. Access:
+   - API Gateway: `http://localhost:8080`
+   - Frontend: `http://localhost:8084`
 
+---
 
-- **Star++** ⭐  if you  find helpful.
-<img alt="Night Coding" src="https://raw.githubusercontent.com/AVS1508/AVS1508/master/assets/Night-Coding.gif" align="center"/>
-<h3 align="left">If you found this valuable and want to return the favour, then</h3>
-<p><a href="https://www.buymeacoffee.com/gajerajay9I"> <img align="left" src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="50" width="210" alt="gajerajay9" /></a></p><br><br>
+## ⏳ Current Status
 
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
-[contributors-url]: https://github.com/jaygajera17/E-commerce-project-springBoot/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/jaygajera17/E-commerce-project-springBoot.svg?style=for-the-badge
-[forks-url]: https://github.com/jaygajera17/E-commerce-project-springBoot/network/members
-[stars-shield]: https://img.shields.io/github/stars/jaygajera17/E-commerce-project-springBoot.svg?style=for-the-badge
-[stars-url]: https://github.com/jaygajera17/E-commerce-project-springBoot/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
-[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
-[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]:  https://www.linkedin.com/in/jay-gajera-a6496b204/
+### ✅ Completed
+- Backend CRUD operations
+- API Gateway configuration
+- Docker containerization
+- Frontend display for users, products, and orders
+- Database separation per service
 
-[youtube-shield]:https://img.shields.io/youtube/views/c6WWdINWSlI?style=social
-[youtube-url]:  https://youtu.be/c6WWdINWSlI
+### ❌ Not Completed Yet
+- Frontend update and delete operations
+- Advanced search and filtering
+- Authentication and authorization
+
+---
+
+## 🎯 Project Goal
+The goal of this project is to apply:
+- Spring Boot and REST APIs
+- Microservices architecture
+- Database integration
+- Frontend-backend communication
+- DevOps basics with Docker
+
+This project is **scalable and extendable** and can be enhanced with payment systems, authentication, or analytics.
+
+---
+
+## 👩‍💻 Author
+**Nada Fethi**
+
